@@ -1,0 +1,140 @@
+@charset 'utf-08';
+
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Pacifico&family=Press+Start+2P&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --font-title: 'Graduate', cursive;
+  --font-content: 'Pacifico', cursive;
+}
+
+.title{
+  font-family: var(--font-title);
+  font-size: 2.5em;
+  text-align: center;
+  padding: 15px 0;
+  background-color:#20B2AA;
+  color: #fff;
+}
+
+#subtitle{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-title);
+  font-size: 1em;
+  color: rgba(103, 101, 101, 0.972);
+  padding: 10px 40px 0 20px;
+}
+
+.inputPlayers{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+}
+
+.inputNane{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.inputRow{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#player1, #player2{
+	padding: 10px;
+	border: 3px solid #20B2AA;
+	border-radius: 50px;
+}
+
+#player1::placeholder, #player2::placeholder{
+  font-family: var(--font-title);
+  text-align: center;
+  
+}
+
+label{
+  font-family: var(--font-title);
+  font-size: 2em;
+  color: rgba(103, 101, 101, 0.972);
+}
+
+#start{
+  padding: 10px 20px;
+	border-radius: 50px;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 700;
+  font-family: var(--font-title);
+	color: #fff;
+	background: linear-gradient(to right, #20B2AA, rgb(82, 169, 169));
+	cursor: pointer;
+}
+
+#start:hover{
+  border: 2px solid #20B2AA;
+  background: transparent;
+  color: rgba(103, 101, 101, 0.972);
+}
+
+
+#gameBoard {
+  width:300px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0 auto;
+}
+
+#gameBoard span {
+  background-color: transparent;
+  border: 7px solid #20B2AA;
+  font-family: var(--font-content);
+  font-size: 3em;
+  text-align: center;
+  color: rgba(103, 101, 101, 0.972);
+}
+
+#gameBoard span:nth-child(1),
+#gameBoard span:nth-child(2),
+#gameBoard span:nth-child(3){
+  border-top: none;
+}
+
+#gameBoard span:nth-child(3),
+#gameBoard span:nth-child(6),
+#gameBoard span:nth-child(9){
+  border-right: none;
+}
+
+#gameBoard span:nth-child(7),
+#gameBoard span:nth-child(8),
+#gameBoard span:nth-child(9){
+  border-bottom: none;
+}
+
+#gameBoard span:nth-child(1),
+#gameBoard span:nth-child(4),
+#gameBoard span:nth-child(7){
+  border-left: none;
+}
+
+#gameBoard span.win {
+  background-color: rgba(22, 224, 56, 0.23);
+  color: rgb(40, 38, 38);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
